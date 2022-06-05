@@ -723,7 +723,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "uWASMTest"
+			"value" : "uWASM"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1004,30 +1004,6 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
-		},
-		{
-			"name" : "uWASMTest_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/m1cha1s/projects/C/uWASM/build"
-		},
-		{
-			"name" : "uWASMTest_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/m1cha1s/projects/C/uWASM"
 		},
 		{
 			"name" : "uWASM_BINARY_DIR",

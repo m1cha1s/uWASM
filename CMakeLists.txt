@@ -1,20 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(uWASM C)
-set(C_STANDARD 99)
+set(CMAKE_C_STANDARD 99)
 
-add_library(${PROJECT_NAME}
+add_library(uWASM
     src/uWASM.c
 )
 
-target_include_directories(${PROJECT_NAME} PUBLIC include)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
+link_libraries(uWASM)
 
-project(uWASMTest C)
-set(C_STANDARD 99)
-
-add_executable(${PROJECT_NAME}
-    test/main.c
+add_executable(uWASMTest 
+    ${CMAKE_CURRENT_LIST_DIR}/test/main.c
 )
-
-target_include_directories(${PROJECT_NAME} PRIVATE include)
-target_link_libraries(${PROJECT_NAME} uWASM)

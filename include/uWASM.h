@@ -2,6 +2,7 @@
 #define UWASM_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 // WASM instructions
 typedef enum
@@ -50,7 +51,8 @@ typedef enum
 } wasmInstType;
 
 // WASM value types
-typedef enum {
+typedef enum
+{
     i32 = 0x7F,
     i64 = 0x7E,
     f32 = 0x7D,
@@ -61,6 +63,22 @@ typedef enum {
     functype = 0x60,
     result = 0x40,
 } wasmValType;
+
+typedef enum
+{
+    custom,
+    type,
+    import,
+    function,
+    table,
+    memory,
+    global,
+    export,
+    start,
+    element,
+    code,
+    data,
+} wasmSectionType;
 
 // Header of WASM file
 typedef struct
@@ -79,8 +97,21 @@ typedef struct
 typedef struct
 {
     uint8_t tag;
-
 } wasmFuncType;
+
+typedef struct
+{
+    uint8_t paramCount;
+    wasmValType *params;
+    uint8_t resultCount;
+    wasmValType *results;
+} wasmFuncSigType;
+
+typedef struct
+{
+    uint8_t sigCount;
+    wasmFuncSigType *sigs;
+} wasmFuncSigSet;
 
 // WASM module
 typedef struct
@@ -89,7 +120,11 @@ typedef struct
     wasmSection *sections;
 } wasmModule;
 
-wasmHeader wasmReadHeader(uint8_t** data);
-wasmSection wasmReadSection(uint8_t** data);
+wasmHeader wasmReadHeader(uint8_t **data);
+wasmSection wasmReadSection(uint8_t **data);
+
+wasmFuncSigSet wasmParseTypeSection(uint32_t sectionSize, uint8_t **data);
+
+bool wasmCheckHeader(wasmHeader header);
 
 #endif

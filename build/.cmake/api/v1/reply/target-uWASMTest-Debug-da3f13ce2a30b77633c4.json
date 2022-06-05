@@ -11,8 +11,7 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries",
-			"target_include_directories"
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -26,19 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 19,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -50,12 +43,15 @@
 			[
 				{
 					"fragment" : "-g  "
+				},
+				{
+					"fragment" : "-std=gnu99"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"path" : "/home/m1cha1s/projects/C/uWASM/include"
 				}
 			],
@@ -69,7 +65,7 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
+			"backtrace" : 1,
 			"id" : "uWASM::@6890427a1f51a3e7e1df"
 		}
 	],
@@ -87,7 +83,7 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 1,
 				"fragment" : "libuWASM.a",
 				"role" : "libraries"
 			}

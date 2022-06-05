@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "uWASMTest",
+					"name" : "uWASM",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,14 +40,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "uWASM::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-uWASM-Debug-9dc52fcf83a4ac12f32b.json",
+					"jsonFile" : "target-uWASM-Debug-818fa329765eb709c075.json",
 					"name" : "uWASM",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "uWASMTest::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-uWASMTest-Debug-7aa1ddd0e7c770756bf2.json",
+					"jsonFile" : "target-uWASMTest-Debug-da3f13ce2a30b77633c4.json",
 					"name" : "uWASMTest",
 					"projectIndex" : 0
 				}
